@@ -1,6 +1,6 @@
 {
   "name": "persnolmailsender",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "send mail with nodemailer with SMTP",
   "main": "index.js",
   "scripts": {
@@ -20,6 +20,6 @@
   },
   "homepage": "https://github.com/RaseshTrinary/persnolmailsender#readme",
   "dependencies": {
-    "nodemailer" : "^6.7.2"
+    "nodemailer": "^6.7.2"
   }
 }
