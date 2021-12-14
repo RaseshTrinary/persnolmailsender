@@ -1,5 +1,6 @@
 const nodemailer = require("nodemailer");
 const config = require("./config");
+const fs = require("fs");
 
 let transporter = nodemailer.createTransport({
   host: config.host,
@@ -10,7 +11,25 @@ let transporter = nodemailer.createTransport({
   },
 });
 
+process.on("beforeExit", (code) => {
+  let date = new Date();
+
+  fs.readFileSync("time.txt", function (err, buf) {
+    console.log(buf.toString());
+  });
+
+  // Can make asynchronous calls
+  setTimeout(() => {
+    console.log(`Process will exit with code: ${code}`);
+    process.exit(code);
+  }, 100);
+});
+
 const sendMail = (data) => {
+  fs.readFileSync("time.txt", function (err, buf) {
+    console.log(buf.toString());
+  });
+
   transporter.sendMail(data, function (err, info) {
     if (err) {
       console.log(err);
