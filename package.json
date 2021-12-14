@@ -1,0 +1,25 @@
+{
+  "name": "persnolmailsender",
+  "version": "1.0.0",
+  "description": "send mail with nodemailer with SMTP",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RaseshTrinary/persnolmailsender.git"
+  },
+  "keywords": [
+    "mail"
+  ],
+  "author": "rasesh.bhavsar@trinarybits.in",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RaseshTrinary/persnolmailsender/issues"
+  },
+  "homepage": "https://github.com/RaseshTrinary/persnolmailsender#readme",
+  "dependencies": {
+    "nodemailer" : "^6.7.2"
+  }
+}
