@@ -30,15 +30,18 @@ process.on("beforeExit", (code) => {
 });
 
 const createMailService = (data) => {
-  // data consists
+  // data createService consists
   // service: 'SendPulse', // service name
   //    auth: {
   //        user: 'account.email@example.com', // username
   //        pass: 'smtp-password' // password
   //    }
+
+  // data messageData consists
+  // from, to, cc, bcc, subject, text, html, attachments
   let service = data.createService;
   messageData = data.messageData;
-  let transporter = nodemailer.createTransport(data);
+  transporter = nodemailer.createTransport(service);
 };
 
 module.exports = createMailService;
